@@ -1,0 +1,6 @@
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Go back to My List", lists_path %>

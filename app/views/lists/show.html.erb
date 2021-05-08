@@ -1,0 +1,7 @@
+<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
+<% @list.movies.each do |movie| %>
+  <%= movie.title %>
+  <%= movie.overview %>
+  <img src= <%= movie.poster_url %> width="200" height="200">
+  <%= movie.rating %>
+<% end %>
