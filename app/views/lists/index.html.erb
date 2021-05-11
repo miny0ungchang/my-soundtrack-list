@@ -9,11 +9,12 @@
     <h3 class="mb-0">My Lists by Genre</h3>
     <%= link_to 'Create a movie list', new_list_path, class: 'btn btn-primary' %>
   </div>
+
   <div class="row">
     <% @lists.each do |list| %>
       <div class="co-12 colsm-6 col-md-4">
         <%= link_to list_path(list), class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= cl_image_tag list.photo.key %>">
             <%= list.name %>
           </div>
         <% end %>
